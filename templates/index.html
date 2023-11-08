@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mass Body Index Calculater</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<h1>Please Enter your Details</h1>
+<form method="post" action="{% url 'bmi-calc-url' %}">
+    {% csrf_token %}
+    <input name="jina" placeholder="Enter your name" type="text"> <br> <br>
+    <input name="uzito" placeholder="Enter your weight" type="text"> <br> <br>
+    <input name="urefu" placeholder="Enter your height" type="text"> <br> <br>
+    <input value="Calculate your MBI" type="submit"> <br> <br>
+
+    <p>{{ name }}</p>
+    <p>{{ bmi }}</p>
+    <p>{{ bmi_result }}</p>
+
+
+
+</form>
+
+</body>
+</html>
